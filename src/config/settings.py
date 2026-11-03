@@ -56,6 +56,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
+APPEND_SLASH = True
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -107,9 +109,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "fa"
+LANGUAGES = [("fa", "Persian"), ("en", "English")]
+LANGUAGE_COOKIE_NAME = "django_language"
+LANGUAGE_COOKIE_AGE = 31536000 # 1 year
+LANGUAGE_COOKIE_DOMAIN = None
+LANGUAGE_COOKIE_PATH = "/"
+LANGUAGE_COOKIE_SECURE = not DEBUG
+LANGUAGE_COOKIE_HTTPONLY = False
+LANGUAGE_COOKIE_SAMESITE = "None" if not DEBUG else "Lax"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "Asia/Tehran"
 
 USE_I18N = True
 
@@ -119,11 +129,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "api/tokens/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Admin url
 ADMIN_URL = os.getenv('ADMIN_URL')
+
+# API Tokens
+API_TOKEN_PREFIX = "stz_" # nosec B105 - public token prefix, not a secret
+API_RANDOM_TOKEN_LENGTH = 48
+API_TOKEN_LENGTH = API_RANDOM_TOKEN_LENGTH + len(API_TOKEN_PREFIX)
+MAX_API_TOKENS_PER_USER = 10
