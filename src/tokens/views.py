@@ -33,7 +33,7 @@ class ApiTokenListCreateView(APIView):
                 return Response(
                     {'message': _(
                         "You cannot have more than %(limit)s API tokens."
-                    ) % {"limit": settings.MAX_API_TOKENS_PER_USER}},
+                    ) % {'limit': settings.MAX_API_TOKENS_PER_USER}},
                     status=status.HTTP_400_BAD_REQUEST
                 )
 
