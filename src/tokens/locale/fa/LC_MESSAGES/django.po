@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 22:31+0330\n"
+"PO-Revision-Date: 2026-11-04 22:31+0330\n"
+"Last-Translator: Raven <EMAIL@ADDRESS>\n"
+"Language-Team: Persian <fa@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: tokens/admin.py:16
+msgid "Masked token"
+msgstr "توکن ماسک شده"
+
+#: tokens/admin.py:28
+msgid "Could not generate a unique API token."
+msgstr "امکان تولید توکن API یکتا وجود نداشت."
+
+#: tokens/models.py:14
+msgid "Read only"
+msgstr "فقط خواندن"
+
+#: tokens/models.py:15
+msgid "Read & write"
+msgstr "خواندن و نوشتن"
+
+#: tokens/models.py:17
+msgid "User"
+msgstr "کاربر"
+
+#: tokens/models.py:18
+msgid "Name"
+msgstr "نام"
+
+#: tokens/models.py:19
+msgid "Token"
+msgstr "توکن"
+
+#: tokens/models.py:21
+msgid "Permission"
+msgstr "مجوز"
+
+#: tokens/models.py:22
+msgid "Is active"
+msgstr "فعال"
+
+#: tokens/models.py:23
+msgid "Created at"
+msgstr "تاریخ ایجاد"
+
+#: tokens/models.py:24
+msgid "Last used at"
+msgstr "آخرین استفاده"
+
+#: tokens/models.py:27
+msgid "API Token"
+msgstr "توکن API"
+
+#: tokens/models.py:28
+msgid "API Tokens"
+msgstr "توکن‌های API"
+
+#: tokens/views.py:35
+#, python-format
+msgid "You cannot have more than %(limit)s API tokens."
+msgstr "شما نمی‌توانید بیش از %(limit)s توکن API داشته باشید."
+
+#: tokens/views.py:55
+msgid "Could not create the API token. Please try again."
+msgstr "امکان ایجاد توکن API وجود نداشت. لطفاً دوباره تلاش کنید."
+
+#: tokens/views.py:72 tokens/views.py:87
+msgid "API token not found."
+msgstr "توکن API یافت نشد."

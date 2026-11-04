@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04 22:31+0330\n"
+"PO-Revision-Date: 2026-11-04 22:31+0330\n"
+"Last-Translator: Raven <EMAIL@ADDRESS>\n"
+"Language-Team: Persian <fa@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: accounts/serializers.py:70
+msgid "Invalid username or password."
+msgstr "نام کاربری یا رمز عبور نامعتبر است."
+
+#: accounts/views.py:27
+msgid "User cannot be created."
+msgstr "امکان ایجاد کاربر وجود ندارد."
+
+#: accounts/views.py:37
+msgid "Account created successfully."
+msgstr "حساب با موفقیت ایجاد شد."
+
+#: accounts/views.py:59
+msgid "Logged in successfully."
+msgstr "با موفقیت وارد شدید."
+
+#: accounts/views.py:72
+msgid "Logged out successfully."
+msgstr "با موفقیت خارج شدید."
