@@ -47,6 +47,22 @@ POST /api/uzi-token/auth/signup/
 
 ### پاسخ موفقیت (201)
 
+| توضیحات       | نوع    | پارامتر   |
+|---------------|--------|-----------|
+| پیام موفقیت   | String | `message` |
+| اطلاعات کاربر | Object | `user`    |
+
+**شیء `user`:**
+
+| توضیحات      | نوع            | پارامتر      |
+|--------------|----------------|--------------|
+| نام کاربری   | String         | `username`   |
+| نام          | String \| null | `first_name` |
+| نام خانوادگی | String \| null | `last_name`  |
+| ایمیل        | String \| null | `email`      |
+
+نمونه:
+
 ```json
 {
   "message": "Account created successfully.",
@@ -100,6 +116,22 @@ POST /api/uzi-token/auth/login/
 
 ### پاسخ موفقیت (200)
 
+| توضیحات       | نوع    | پارامتر   |
+|---------------|--------|-----------|
+| پیام موفقیت   | String | `message` |
+| اطلاعات کاربر | Object | `user`    |
+
+**شیء `user`:**
+
+| توضیحات      | نوع            | پارامتر      |
+|--------------|----------------|--------------|
+| نام کاربری   | String         | `username`   |
+| نام          | String \| null | `first_name` |
+| نام خانوادگی | String \| null | `last_name`  |
+| ایمیل        | String \| null | `email`      |
+
+نمونه:
+
 ```json
 {
   "message": "Logged in successfully.",
@@ -130,6 +162,12 @@ POST /api/uzi-token/auth/logout/
 این درخواست بدنه ندارد.
 
 ### پاسخ موفقیت (200)
+
+| توضیحات     | نوع    | پارامتر   |
+|-------------|--------|-----------|
+| پیام موفقیت | String | `message` |
+
+نمونه:
 
 ```json
 {
