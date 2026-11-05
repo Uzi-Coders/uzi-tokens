@@ -28,9 +28,9 @@ load_dotenv(ENV_FILE)
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(int(os.getenv("DEBUG")))
+DEBUG = bool(int(os.getenv('DEBUG')))
 
-ALLOWED_HOSTS = list(os.getenv("ALLOWED_HOSTS").split(","))
+ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS').split(','))
 
 
 # Application definition
@@ -116,17 +116,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = "fa"
-LANGUAGES = [("fa", "Persian"), ("en", "English")]
-LANGUAGE_COOKIE_NAME = "django_language"
+LANGUAGE_CODE = 'fa'
+LANGUAGES = [('fa', 'Persian'), ('en', 'English')]
+LANGUAGE_COOKIE_NAME = 'django_language'
 LANGUAGE_COOKIE_AGE = 31536000 # 1 year
 LANGUAGE_COOKIE_DOMAIN = None
-LANGUAGE_COOKIE_PATH = "/"
+LANGUAGE_COOKIE_PATH = '/'
 LANGUAGE_COOKIE_SECURE = not DEBUG
 LANGUAGE_COOKIE_HTTPONLY = False
-LANGUAGE_COOKIE_SAMESITE = "None" if not DEBUG else "Lax"
+LANGUAGE_COOKIE_SAMESITE = 'None' if not DEBUG else 'Lax'
 
-TIME_ZONE = "Asia/Tehran"
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
@@ -136,8 +136,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "api/uzi-token/static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_URL = 'api/uzi-token/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -163,11 +163,11 @@ CORS_ALLOWED_ORIGINS = list(os.getenv('CORS_ALLOWED_ORIGINS').split(','))
 
 # Django restframework configs
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.SessionAuthentication",
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
     ],
-    "DEFAULT_RENDERER_CLASSES": [
-        "rest_framework.renderers.JSONRenderer",
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
     ]
 }
 
@@ -178,7 +178,7 @@ ADMIN_URL = os.getenv('ADMIN_URL')
 MAX_USERS = 15
 
 # API Tokens
-API_TOKEN_PREFIX = "stz_" # nosec B105 - public token prefix, not a secret
+API_TOKEN_PREFIX = 'stz_' # nosec B105 - public token prefix, not a secret
 API_RANDOM_TOKEN_LENGTH = 48
 API_TOKEN_LENGTH = API_RANDOM_TOKEN_LENGTH + len(API_TOKEN_PREFIX)
 MAX_API_TOKENS_PER_USER = 10
