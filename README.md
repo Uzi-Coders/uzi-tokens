@@ -4,6 +4,12 @@ A small Django REST API for authentication and API token management.
 
 Base URL: `/api/uzi-token/`
 
+## Docs (Persian)
+
+- [Authentication](docs/auth.md)
+- [Core endpoints](docs/core.md)
+- [API tokens](docs/tokens.md)
+
 ## Quick start (Docker)
 
 Create a `.env` file:
@@ -29,8 +35,6 @@ Notes:
 - Values passed with `--env-file` are not unquoted by Docker, so do not wrap them in `"`.
 - Data lives in SQLite inside the container. To persist it, add a volume.
 
-## Docs (Persian)
+## License
 
-- [Authentication](docs/auth.md)
-- [Core endpoints](docs/core.md)
-- [API tokens](docs/tokens.md)
+[MIT License](LICENSE)]
